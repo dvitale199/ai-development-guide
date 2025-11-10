@@ -30,25 +30,30 @@ This repository provides principles, practices, and patterns for developing high
 ### 🚀 New to AI-Assisted Development?
 
 Start here:
-1. **[Getting Started Guide](docs/getting-started/README.md)** - Orientation and onboarding
-2. **[For AI Tools](docs/getting-started/for-ai-tools.md)** - How AI assistants should use this repo
-3. **[AI Development Guide](AI_DEVELOPMENT_GUIDE.md)** - Comprehensive principles and practices
+1. **[AI Development Guide](AI_DEVELOPMENT_GUIDE.md)** - Comprehensive principles and practices
+2. **Getting Started Guide** - *(Coming in Phase 2)* Orientation and onboarding
+3. **For AI Tools** - *(Coming in Phase 2)* How AI assistants should use this repo
 
 ### 📚 Core Principles
 
-Fundamental concepts for AI-assisted development:
-- **[Empiricism](docs/core-principles/empiricism.md)** - Test everything, trust evidence over assumptions
-- **[Incrementalism](docs/core-principles/incrementalism.md)** - Small, atomic, reversible changes
-- **[Testing](docs/core-principles/testing.md)** - Test-driven development with AI
-- **[Human-AI Collaboration](docs/core-principles/human-ai-collaboration.md)** - Roles and responsibilities
+All core principles are covered in the [AI Development Guide](AI_DEVELOPMENT_GUIDE.md):
+- **Empiricism** - Test everything, trust evidence over assumptions
+- **Incrementalism** - Small, atomic, reversible changes
+- **Testing** - Test-driven development with AI
+- **Human-AI Collaboration** - Roles and responsibilities
+
+*Standalone focused guides coming in Phase 3*
 
 ### 🛠️ Practical Guides
 
-Task-specific guidance:
-- **[Code Review](docs/guides/code-review.md)** - How to review AI-generated code
-- **[Deployment](docs/guides/deployment.md)** - Feature flags, rollback, monitoring
-- **[Testing Strategy](docs/guides/testing-strategy.md)** - TDD workflow with AI
-- **[Incident Response](docs/guides/incident-response.md)** - Learning from production issues
+**Currently Available:**
+- See [AI Development Guide](AI_DEVELOPMENT_GUIDE.md) for code review checklists, deployment strategies, and testing practices
+
+**Coming in Phase 4:**
+- Code Review - Detailed review process for AI-generated code
+- Deployment - Feature flags, rollback, monitoring
+- Testing Strategy - TDD workflow with AI
+- Incident Response - Learning from production issues
 
 ### 💻 Language & Framework Guides
 
@@ -59,17 +64,22 @@ Stack-specific implementation guidance:
 
 ### 🚫 Anti-Patterns
 
-Learn what to avoid:
-- **[Common Pitfalls](docs/anti-patterns/README.md)** - AI coding mistakes
-- **[Detection Guide](docs/anti-patterns/detection-guide.md)** - How to spot issues
+**Currently Available:**
+- See [AI Development Guide - Anti-Patterns section](AI_DEVELOPMENT_GUIDE.md#anti-patterns--red-flags) for common pitfalls and red flags
+
+**Coming in Phase 5:**
+- Comprehensive anti-patterns guide
+- Detection guide for code review
 
 ### 📋 Templates
 
-Ready-to-use resources:
-- **[PR Template](docs/templates/pr-template.md)** - Structure for AI-assisted pull requests
-- **[Review Checklist](docs/templates/review-checklist.md)** - Comprehensive code review guide
-- **[Commit Messages](docs/templates/commit-messages.md)** - How to document AI contributions
-- **[Retrospective Template](docs/templates/retrospective-template.md)** - Blameless incident reviews
+**Coming in Phase 5:**
+- PR Template - Structure for AI-assisted pull requests
+- Review Checklist - Comprehensive code review guide
+- Commit Messages - How to document AI contributions
+- Retrospective Template - Blameless incident reviews
+
+*In the meantime, see examples in the [AI Development Guide](AI_DEVELOPMENT_GUIDE.md)*
 
 ---
 
@@ -80,15 +90,14 @@ ai-development-guide/
 ├── README.md                          # You are here
 ├── AI_DEVELOPMENT_GUIDE.md            # Comprehensive guide (language-agnostic)
 ├── docs/
-│   ├── getting-started/               # Onboarding for developers and AI tools
-│   ├── core-principles/               # Fundamental concepts
-│   ├── guides/                        # Task-specific guidance
-│   ├── stacks/                        # Language/framework specific guides
-│   │   └── python-fastapi/            # Python/FastAPI implementation
-│   ├── anti-patterns/                 # Common mistakes to avoid
-│   └── templates/                     # Reusable checklists and templates
+│   └── stacks/                        # Language/framework specific guides
+│       └── python-fastapi/            # Python/FastAPI implementation
+│           ├── README.md              # Stack guide
+│           └── CLAUDE.md              # Quick reference
 └── PROJECT_PLAN.md                    # Development roadmap
 ```
+
+**Coming soon:** getting-started/, core-principles/, guides/, anti-patterns/, templates/
 
 ---
 
@@ -190,7 +199,7 @@ Claude Code users get additional guidance on:
 - Tool usage patterns (Read, Edit, Bash, etc.)
 - Workflow optimization
 
-**See:** [For Claude](docs/getting-started/for-claude.md) for Claude-specific instructions.
+**Claude-specific guidance coming in Phase 2.**
 
 ---
 
@@ -198,29 +207,29 @@ Claude Code users get additional guidance on:
 
 ### For Developers
 
-1. **Read the [Getting Started Guide](docs/getting-started/README.md)**
-2. **Review core principles** - Start with [Empiricism](docs/core-principles/empiricism.md)
-3. **Check your stack guide** - See [Python/FastAPI](docs/stacks/python-fastapi/README.md) or your language
-4. **Use templates** - Adopt [PR templates](docs/templates/pr-template.md) and [review checklists](docs/templates/review-checklist.md)
-5. **Read the comprehensive guide** - [AI_DEVELOPMENT_GUIDE.md](AI_DEVELOPMENT_GUIDE.md) for deep understanding
+1. **Read [AI_DEVELOPMENT_GUIDE.md](AI_DEVELOPMENT_GUIDE.md)** - Start with core principles
+2. **Check your stack guide** - See [Python/FastAPI](docs/stacks/python-fastapi/README.md) or your language
+3. **Apply incrementally** - Start with code review checklist from the guide
+4. **Test everything** - Follow TDD practices outlined in the guide
+5. **Review [PROJECT_PLAN.md](PROJECT_PLAN.md)** to see what's coming next
 
 ### For AI Coding Assistants
 
 If you're an AI tool reading this repository:
 
-1. **Read [For AI Tools](docs/getting-started/for-ai-tools.md)** first
-2. **Apply core principles** when generating code
-3. **Follow stack conventions** from relevant guide
-4. **Reference templates** when helping users create PRs or reviews
-5. **Mark your contributions** with `[ai-assisted]` or `[ai-generated]` tags
+1. **Read [AI_DEVELOPMENT_GUIDE.md](AI_DEVELOPMENT_GUIDE.md)** first for principles
+2. **Apply core principles** when generating code (empiricism, incrementalism, testing)
+3. **Follow stack conventions** from [docs/stacks/python-fastapi/](docs/stacks/python-fastapi/) or relevant guide
+4. **Mark your contributions** with `[ai-assisted]` or `[ai-generated]` tags
+5. **Reference the code review checklist** before suggesting large changes
 
 ### For Teams
 
-1. **Adopt incrementally** - Start with code review checklist
-2. **Customize templates** - Adapt PR and commit message templates to your workflow
-3. **Train reviewers** - Share anti-patterns guide with code reviewers
-4. **Establish conventions** - Create a stack guide for your tech stack if not present
-5. **Share learnings** - Use retrospective template to learn from incidents
+1. **Start with [AI_DEVELOPMENT_GUIDE.md](AI_DEVELOPMENT_GUIDE.md)** - Establish shared understanding
+2. **Adopt the code review checklist** - Use it for all AI-generated PRs
+3. **Customize for your stack** - Create or extend stack guides in [docs/stacks/](docs/stacks/)
+4. **Track progress** - See [PROJECT_PLAN.md](PROJECT_PLAN.md) for roadmap
+5. **Contribute back** - Share improvements and new stack guides
 
 ---
 
@@ -232,7 +241,7 @@ We welcome contributions! Whether you want to:
 - Share code examples or case studies
 - Fix typos or broken links
 
-Please see **CONTRIBUTING.md** for guidelines.
+*(Contribution guidelines coming soon - see [PROJECT_PLAN.md](PROJECT_PLAN.md) for roadmap)*
 
 ---
 
